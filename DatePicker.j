@@ -56,35 +56,35 @@ CPLogRegister(CPLogConsole);
 {
     self = [super initWithFrame:aFrame];
     if(self){
-        _theView = [[CPView alloc] initWithFrame:CGRectMake(4, 3, CGRectGetWidth(aFrame) - 20, 23)];
+        _theView = [[CPView alloc] initWithFrame:CGRectMake(3, 3, CGRectGetWidth(aFrame) - 20, 23)];
 
         //bezel = [CPColor whiteColor];
         //bezelFocused = [CPColor whiteColor];
 
         bezel = [CPColor colorWithPatternImage:[[CPNinePartImage alloc] initWithImageSlices:
             [
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-0.png" size:CGSizeMake(2.0, 3.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-1.png" size:CGSizeMake(1.0, 3.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-2.png" size:CGSizeMake(2.0, 3.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-3.png" size:CGSizeMake(2.0, 1.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-4.png" size:CGSizeMake(1.0, 1.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-5.png" size:CGSizeMake(2.0, 1.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-6.png" size:CGSizeMake(2.0, 2.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-7.png" size:CGSizeMake(1.0, 2.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-8.png" size:CGSizeMake(2.0, 2.0)]
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-0.png" size:CGSizeMake(3.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-1.png" size:CGSizeMake(1.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-2.png" size:CGSizeMake(3.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-3.png" size:CGSizeMake(3.0, 1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-4.png" size:CGSizeMake(1.0, 1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-5.png" size:CGSizeMake(3.0, 1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-6.png" size:CGSizeMake(3.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-7.png" size:CGSizeMake(1.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-8.png" size:CGSizeMake(3.0, 4.0)]
             ]]];
 
          bezelFocused = [CPColor colorWithPatternImage:[[CPNinePartImage alloc] initWithImageSlices:
             [
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-0.png" size:CGSizeMake(6.0,  7.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-1.png" size:CGSizeMake(1.0,  7.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-2.png" size:CGSizeMake(6.0,  7.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-3.png" size:CGSizeMake(6.0,  1.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-4.png" size:CGSizeMake(1.0,  1.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-5.png" size:CGSizeMake(6.0,  1.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-6.png" size:CGSizeMake(6.0,  5.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-7.png" size:CGSizeMake(1.0,  5.0)],
-                [[CPImage alloc] initByReferencingFile:"Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-8.png" size:CGSizeMake(6.0,  5.0)]
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-0.png" size:CGSizeMake(7.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-1.png" size:CGSizeMake(1.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-2.png" size:CGSizeMake(7.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-3.png" size:CGSizeMake(7.0,  1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-4.png" size:CGSizeMake(1.0,  1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-5.png" size:CGSizeMake(7.0,  1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-6.png" size:CGSizeMake(7.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-7.png" size:CGSizeMake(1.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-8.png" size:CGSizeMake(7.0,  7.0)]
             ]]];
 
         [_theView setBackgroundColor:bezel];
@@ -93,7 +93,7 @@ CPLogRegister(CPLogConsole);
         inputManager = self;//[[DatePickerInputManager alloc] init];
         [inputManager setSuperController:self];
 
-        _theStepper = [[Stepper alloc] initWithFrame:CGRectMake(aFrame.size.width -13, 3, 13, 23)];
+        _theStepper = [[Stepper alloc] initWithFrame:CGRectMake(aFrame.size.width -13, 4, 13, 25)];
         [_theStepper setTarget:self];
         [_theStepper setAction:@selector(stepperAction:)];
 
@@ -151,7 +151,7 @@ CPLogRegister(CPLogConsole);
 - (void)displayPreset:(id)type
 {
     if(type == 1){ //type is stardard date
-        var _theMonthField = [[DateSegment alloc] initWithFrame:CGRectMake(6, 7, 20, 18)];
+        var _theMonthField = [[DateSegment alloc] initWithFrame:CGRectMake(28, 7, 20, 18)];
         [_theMonthField setStringValue:@"00"];
         [_theMonthField sizeToFit];
         [_theMonthField setDelegate:self];
@@ -165,7 +165,7 @@ CPLogRegister(CPLogConsole);
             [_theView setFrame:CGRectMake(CGRectGetMinX([_theView frame]), CGRectGetMinY([_theView frame]), CGRectGetWidth([_theView frame]), CGRectGetHeight([_theMonthField frame]) + 6)];
         }
 
-        var _theDayField = [[DateSegment alloc] initWithFrame:CGRectMake(28, 7, 20, 18)];
+        var _theDayField = [[DateSegment alloc] initWithFrame:CGRectMake(6, 7, 20, 18)];
         [_theDayField setStringValue:@"00"];
         [_theDayField sizeToFit];
         [_theDayField setDelegate:self];
@@ -650,7 +650,7 @@ CPLogRegister(CPLogConsole);
     //otherwise select the first one.
     //FIX ME: the stepper needs to be clicked twice before the value changes.
     if(!activeDateSegment)
-        [self setActiveDateSegment:(prevActiveDateSegment) ? prevActiveDateSegment : [segments objectAtIndex:0]];
+        [self setActiveDateSegment:(prevActiveDateSegment) ? prevActiveDateSegment : [segments objectAtIndex:1]];
 
     var newValue = [_theStepper intValue];
     //[self setActiveDateSegment:[superController currentFocusedSegment]];
@@ -801,11 +801,13 @@ CPLogRegister(CPLogConsole);
     self = [super initWithFrame:aFrame];
 
     if(self){
+        var mainBundle = [CPBundle mainBundle];
+
         focusedBackground = [CPColor colorWithPatternImage:[[CPThreePartImage alloc] initWithImageSlices:
             [
-                [[CPImage alloc] initByReferencingFile:"Resources/DatePicker/date-segment-left.png" size:CGSizeMake(4.0, 18.0)],
-                [[CPImage alloc] initByReferencingFile:"Resources/DatePicker/date-segment-center.png" size:CGSizeMake(1.0, 18.0)],
-                [[CPImage alloc] initByReferencingFile:"Resources/DatePicker/date-segment-right.png" size:CGSizeMake(4.0, 18.0)]
+                [[CPImage alloc] initWithContentsOfFile:[mainBundle pathForResource:@"DatePicker/date-segment-left.png"] size:CGSizeMake(4.0, 18.0)],
+                [[CPImage alloc] initWithContentsOfFile:[mainBundle pathForResource:@"DatePicker/date-segment-center.png"] size:CGSizeMake(1.0, 18.0)],
+                [[CPImage alloc] initWithContentsOfFile:[mainBundle pathForResource:@"DatePicker/date-segment-right.png"] size:CGSizeMake(4.0, 18.0)]
             ] isVertical:NO]];
 
         [self setValue:CPRightTextAlignment forThemeAttribute:@"alignment"];
