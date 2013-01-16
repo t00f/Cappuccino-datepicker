@@ -137,3 +137,5 @@
 		//console.log([self doubleValue]);
 	[self sendAction:[self action] to:[self target]];
 }
+
+@end
