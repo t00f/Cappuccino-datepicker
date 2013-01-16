@@ -1163,7 +1163,7 @@ CPLogRegister(CPLogConsole);
 @end
 
 @implementation DatePicker (CPCoding)
-{
+
 - (id)initWithCoder:(CPCoder)aCoder
 {
     self = [super initWithCoder:aCoder];
@@ -1194,5 +1194,4 @@ CPLogRegister(CPLogConsole);
     [aCoder encodeObject:_theStepper forKey:datePickerStepper];
 }
 
-}
 @end
