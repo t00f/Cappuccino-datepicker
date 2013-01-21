@@ -18,6 +18,7 @@
  */
 
 @import <AppKit/CPControl.j>
+@import <AppKit/CPTextField.j>
 @import "Stepper.j"
 
 CPLogRegister(CPLogConsole);
