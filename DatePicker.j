@@ -17,9 +17,19 @@
  * Lesser General Public License for more details.
  */
 
+@import <Foundation/Foundation.j>
+
 @import <AppKit/CPControl.j>
 @import <AppKit/CPTextField.j>
+@import <AppKit/CPView.j>
+
 @import "Stepper.j"
+
+var datePickerDelegate = @"datePickerDelegateIdentifier",
+    datePickerSegments = @"datePickerSegmentsIdentifier",
+    datePickerView = @"datePickerViewIdentifier",
+    datePickerStepper = @"datePickerStepperIdentifier",
+    datePickerDate = @"datePickerDateIdentifier";
 
 CPLogRegister(CPLogConsole);
 
@@ -142,11 +152,11 @@ CPLogRegister(CPLogConsole);
 //this method doesn't actually work... yet...
 - (void)addDateSegmentOfType:(id)segmentType withInitialValue:(CPString)stringValue withSeperatorAtEnd:(CPString)seperator
 {
-    var aFrameSize = [self makeFrameForType:segmentType];
-
-    var newSegment = [[DateSegment alloc] initWithFrame:CGRectMake(6, 7, 20, 18)];
-    [dateSegmentes addObject:newSegment];
-    [self addSubview: newSegment];
+    // var aFrameSize = [self makeFrameForType:segmentType];
+    //
+    // var newSegment = [[DateSegment alloc] initWithFrame:CGRectMake(6, 7, 20, 18)];
+    // [dateSegmentes addObject:newSegment];
+    // [self addSubview: newSegment];
 }
 
 - (void)displayPreset:(id)type
@@ -1190,7 +1200,7 @@ CPLogRegister(CPLogConsole);
     // This will come out nil on the other side with decodeObjectForKey:
     [aCoder encodeObject:_date forKey:datePickerDate];
     [aCoder encodeObject:segments forKey:datePickerSegments];
-    [aCoder encodeObject:_delegate forKey:dataPickerDelegate];
+    [aCoder encodeObject:_delegate forKey:datePickerDelegate];
     [aCoder encodeObject:_theView forKey:datePickerView];
     [aCoder encodeObject:_theStepper forKey:datePickerStepper];
 }
