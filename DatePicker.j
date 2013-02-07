@@ -71,31 +71,33 @@ CPLogRegister(CPLogConsole);
 
         //bezel = [CPColor whiteColor];
         //bezelFocused = [CPColor whiteColor];
+        bundle = [CPBundle mainBundle],
+        woodbarImage = [[CPImage alloc] initWithContentsOfFile:[bundle pathForResource:"woodbar_top.jpg"]],
 
         bezel = [CPColor colorWithPatternImage:[[CPNinePartImage alloc] initWithImageSlices:
             [
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-0.png" size:CGSizeMake(3.0, 4.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-1.png" size:CGSizeMake(1.0, 4.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-2.png" size:CGSizeMake(3.0, 4.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-3.png" size:CGSizeMake(3.0, 1.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-4.png" size:CGSizeMake(1.0, 1.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-5.png" size:CGSizeMake(3.0, 1.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-6.png" size:CGSizeMake(3.0, 4.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-7.png" size:CGSizeMake(1.0, 4.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-8.png" size:CGSizeMake(3.0, 4.0)]
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-0.png" size:CGSizeMake(3.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-1.png" size:CGSizeMake(1.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-2.png" size:CGSizeMake(3.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-3.png" size:CGSizeMake(3.0, 1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-4.png" size:CGSizeMake(1.0, 1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-5.png" size:CGSizeMake(3.0, 1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-6.png" size:CGSizeMake(3.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-7.png" size:CGSizeMake(1.0, 4.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-8.png" size:CGSizeMake(3.0, 4.0)]
             ]]];
 
          bezelFocused = [CPColor colorWithPatternImage:[[CPNinePartImage alloc] initWithImageSlices:
             [
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-0.png" size:CGSizeMake(7.0,  7.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-1.png" size:CGSizeMake(1.0,  7.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-2.png" size:CGSizeMake(7.0,  7.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-3.png" size:CGSizeMake(7.0,  1.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-4.png" size:CGSizeMake(1.0,  1.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-5.png" size:CGSizeMake(7.0,  1.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-6.png" size:CGSizeMake(7.0,  7.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-7.png" size:CGSizeMake(1.0,  7.0)],
-                [[CPImage alloc] initWithContentsOfFile:"static/reportcard-client/Frameworks/AppKit/Resources/Aristo.blend/Resources/textfield-bezel-square-focused-8.png" size:CGSizeMake(7.0,  7.0)]
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-0.png" size:CGSizeMake(7.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-1.png" size:CGSizeMake(1.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-2.png" size:CGSizeMake(7.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-3.png" size:CGSizeMake(7.0,  1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-4.png" size:CGSizeMake(1.0,  1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-5.png" size:CGSizeMake(7.0,  1.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-6.png" size:CGSizeMake(7.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-7.png" size:CGSizeMake(1.0,  7.0)],
+                [[CPImage alloc] initWithContentsOfFile:"Frameworks/AppKit/Resources/Aristo2.blend/Resources/textfield-bezel-square-focused-8.png" size:CGSizeMake(7.0,  7.0)]
             ]]];
 
         [_theView setBackgroundColor:bezel];
