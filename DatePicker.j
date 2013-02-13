@@ -71,8 +71,6 @@ CPLogRegister(CPLogConsole);
 
         //bezel = [CPColor whiteColor];
         //bezelFocused = [CPColor whiteColor];
-        bundle = [CPBundle mainBundle],
-        woodbarImage = [[CPImage alloc] initWithContentsOfFile:[bundle pathForResource:"woodbar_top.jpg"]],
 
         bezel = [CPColor colorWithPatternImage:[[CPNinePartImage alloc] initWithImageSlices:
             [
